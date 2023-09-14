@@ -3,13 +3,18 @@ import { View, Text, TouchableOpacity } from "react-native";
 type Props = {
   priority?: "High" | "Medium" | "Low"; // 重要程度 红，黄，蓝
   title: string; // 标题 Copilot项目搭建
-  period: string; // 时间间隔 9:45–11:00 AM
+  startTime: string; // Unix时间戳: 1629720000  
+  endTime: string;   // Unix时间戳: 1629720000  
 };
 
 export default function TodoListItem(props: Props) {
   const priority = props.priority ?? "Low";
-  const { title, period } = props;
-
+  const { title, startTime, endTime } = props;
+ // 转换Unix时间戳字符串为日期对象
+  const formatTime = (timestamp: string) => {
+    const date = new Date(parseInt(timestamp, 10) * 1000);
+    return `${date.getHours()}:${date.getMinutes() < 10 ? '0' : ''}${date.getMinutes()}`;
+  }
   const priorityColors: {
     [key: string]: {
       background: string;
@@ -33,7 +38,7 @@ export default function TodoListItem(props: Props) {
   return (
     <TouchableOpacity activeOpacity={0.7}>
       <View className="w-full flex justify-center items-center mt-3">
-        <View className="bg-white h-20 w-80 px-4 rounded-xl flex flex-row justify-between items-center">
+        <View className="bg-white h-20 w-full px-4 rounded-xl flex flex-row justify-between items-center">
           <View
             className={`w-[4] h-11 rounded-sm ${priorityColors[priority].background}`}
           ></View>
@@ -44,7 +49,8 @@ export default function TodoListItem(props: Props) {
             >
               {title}
             </Text>
-            <Text className="text-sm">{period}</Text>
+            <Text className="text-sm">{formatTime(startTime)} - 
+ {formatTime(endTime)}</Text>
           </View>
 
           <View

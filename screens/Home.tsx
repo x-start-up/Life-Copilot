@@ -11,22 +11,25 @@ const Home = (props: Props) => {
   return (
     <View className="w-full h-screen">
       <HeaderBar></HeaderBar>
-      <View className="bg-[#EEEEF0] h-full">
+      <View className="bg-[#EEEEF0] h-full px-5">
         <TodoListItem
           title={"Copilot项目搭建"}
-          period={"9:45–11:00 AM"}
+          startTime={"1694654100"}
+          endTime={"1694675700"}
           priority="High"
         />
 
         <TodoListItem
           title={"Client  issue fix"}
-          period={"9:45–11:00 AM"}
+            startTime={"1694654100"}
+            endTime={"1694675700"}
           priority="Medium"
         />
 
         <TodoListItem
           title={"完成todo list view"}
-          period={"9:45–11:00 AM"}
+            startTime={"1694654100"}
+            endTime={"1694675700"}
           priority="Low"
         />
       </View>
