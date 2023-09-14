@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import HeaderBar from "~/components/HeaderBar";
-import TodoListItem from "~/components/TodoListView";
+import TodoListItem from "~/components/TodoListItem";
 
 import Micro from "~/components/Micro";
 
