@@ -36,7 +36,7 @@ export default function TodoListItem(props: Props) {
   };
 
   return (
-    <TouchableOpacity activeOpacity={0.7}>
+    <TouchableOpacity style={{}} activeOpacity={0.7}>
       <View className="w-full flex justify-center items-center mt-3">
         <View className="bg-white h-20 w-full px-4 rounded-xl flex flex-row justify-between items-center">
           <View
