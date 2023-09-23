@@ -1,9 +1,6 @@
 import React from "react";
 import { View, Button } from "react-native";
-import HeaderBar from "../../src/components/HeaderBar";
 import { router } from 'expo-router';
-
-import Micro from "../../src/components/Micro";
 
 type Props = {};
 

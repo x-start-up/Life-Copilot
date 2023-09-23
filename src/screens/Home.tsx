@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import HeaderBar from "../../src/components/HeaderBar";
 import TodoListItem from "../../src/components/TodoListItem";
 
