@@ -9,7 +9,7 @@ export default function Micro() {
         <View className="border border-white rounded-full w-full h-full  flex  flex-row  justify-center  items-center ">
           <Image
             style={{ width: 20, height: 30 }}
-            source={require("~/assets/micfill.png")}
+            source={require("../assets/micfill.png")}
           ></Image>
         </View>
       </View>

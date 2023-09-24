@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
+import { router } from 'expo-router';
 import { Image } from "expo-image";
 import { useAssets } from "expo-asset";
 import classnames from "classnames";
@@ -23,13 +24,15 @@ export default function HeaderBar({}: Props) {
           style={{ width: 42, height: 42 }}
           transition={1000}
         />
-        <Image
+        <TouchableOpacity onPress={() => { router.push('/settings')}}>
+          <Image
           className=""
-          source={require("~/assets/setting.png")}
+          source={require("../assets/setting.png")}
           contentFit="cover"
           style={{ width: 32, height: 32 }}
           transition={1000}
-        />
+          />
+        </TouchableOpacity>
       </View>
 
       <View
