@@ -1,1 +1,1 @@
-export { default } from '../../src/screens/Settings'
+export { default } from '~/screens/Settings'
