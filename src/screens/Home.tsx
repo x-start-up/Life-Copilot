@@ -1,9 +1,9 @@
 import React from "react";
 import { View } from "react-native";
-import HeaderBar from "../../src/components/HeaderBar";
-import TodoListItem from "../../src/components/TodoListItem";
+import HeaderBar from "~/components/HeaderBar";
+import TodoListItem from "~/components/TodoListItem";
 
-import Micro from "../../src/components/Micro";
+import Micro from "~/components/Micro";
 
 type Props = {};
 

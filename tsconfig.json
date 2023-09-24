@@ -14,11 +14,11 @@
     "skipLibCheck": true,
     "target": "ESNext",
     "baseUrl": ".",
-    "paths": {
+    "paths": { //  指定相对于 baseUrl 选项计算的路径映射, 别名路径也可以跳转
       "~/*": [
-        "./*"
+        "src/*"
       ]
-    },
+    }
   },
   "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }

@@ -9,12 +9,15 @@ module.exports = function(api) {
     require.resolve('expo-router/babel'),
     ['@babel/plugin-proposal-decorators', { legacy: true }], // mbox
     [
-      'module-resolver',
+      'babel-plugin-root-import',
       {
-        alias: {
-          src: './src'
-        }
-      }
+        paths: [
+          {
+            rootPathSuffix: './src',
+            rootPathPrefix: '~/', // 使用 ~/  代替 ./src (~指向的就是src目录)
+          }
+        ],
+      },
     ]]
   };
 };

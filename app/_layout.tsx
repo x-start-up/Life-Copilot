@@ -1,1 +1,1 @@
-export { default } from '../src/layouts/RootLayout'
+export { default } from '~/layouts/RootLayout'
